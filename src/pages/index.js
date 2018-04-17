@@ -9,9 +9,9 @@ const IndexPage = ({data}) => (
   <div id='home'>
     <Header />
     <Hero />
-    <div className="portfolio-items">
+    <div className="portfolio-items columns">
     {data.allMarkdownRemark.edges.map( ({node}) => (
-      <Item name={node.frontmatter.title} tags={node.frontmatter.tags} url={node.frontmatter.url} img={node.frontmatter.img} />
+      <Item name={node.frontmatter.title} tags={node.frontmatter.tags} url={node.frontmatter.url} img={node.frontmatter.img2} />
     ))}
     </div>
     <Footer />
@@ -19,6 +19,19 @@ const IndexPage = ({data}) => (
 )
 
 export default IndexPage
+
+window.onscroll = () => {
+  var top = window.pageYOffset
+  console.log(top)
+  var navbar = document.getElementById("navbar")
+  
+  if(top < 700) {	
+    navbar.classList.add('clear')
+  }
+  else {
+    navbar.classList.remove('clear')
+  }
+};
 
 export const query = graphql`
   query ItemQuery {
@@ -29,7 +42,7 @@ export const query = graphql`
             title
             url
             tags
-            img
+            img2
           }
         }
       }

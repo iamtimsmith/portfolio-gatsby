@@ -2,6 +2,9 @@
 title: 'The Effie Afton'
 url: '/the-effie-afton'
 tags: '#html #css #tumblr #responsive'
-img: 'http://www.iamtimsmith.com/images/theeffieafton-mockup.jpg'
+frontpage: 'http://www.iamtimsmith.com/images/portfolio/theeffieafton/frontpage.jpg'
+img1: 'http://www.iamtimsmith.com/images/portfolio/theeffieafton/mockup1.jpg'
+img2: 'http://www.iamtimsmith.com/images/theeffieafton-mockup.jpg'
+siteUrl: 'http://theeffieafton.iamtimsmith.com'
 ---
-This is some text and things.
+The Effie Afton is an indie rock band from the midwest. They were looking for a minimalist website to showcase their music.

@@ -8,7 +8,7 @@ export default ({data}) => (
     <Header />
     <div className="portfolio-items">
       {data.allMarkdownRemark.edges.map( ({node}) => (
-        <Item name={node.frontmatter.title} tags={node.frontmatter.tags} url={node.frontmatter.url} img={node.frontmatter.img} />
+        <Item name={node.frontmatter.title} tags={node.frontmatter.tags} url={node.frontmatter.url} img={node.frontmatter.img2} />
       ))}
     </div>
     <Footer />
@@ -24,7 +24,7 @@ export const query = graphql`
             title
             url
             tags
-            img
+            img2
           }
         }
       }
