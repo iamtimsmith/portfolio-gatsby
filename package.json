@@ -4,9 +4,14 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "bloomer": "^0.6.3",
+    "bulma": "^0.7.0",
     "gatsby": "^1.9.247",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-react-helmet": "^2.0.10",
+    "gatsby-plugin-sass": "^1.0.25",
+    "gatsby-source-filesystem": "^1.5.32",
+    "gatsby-transformer-remark": "^1.7.40",
     "react-helmet": "^5.2.0"
   },
   "keywords": [

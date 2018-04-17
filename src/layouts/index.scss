@@ -1,0 +1,315 @@
+// Imports
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400|Raleway');
+@import '~bulma/sass/utilities/initial-variables';
+@import '~bulma/bulma';
+
+// Variables
+$serif: 'Playfair Display', serif;
+$sans: 'Raleway', sans;
+$black: #222;
+$clear: rgba(0,0,0,0);
+
+// Mixins
+@mixin responsive {
+  content:'';
+  display:block;
+  padding-bottom:100%;
+}
+
+
+// Custom SCSS
+html {
+  body {
+    margin:0;
+    font-family: $sans;
+  }  
+}
+.button {
+  border:2px solid $black;
+  background:$clear;
+  border-radius:0;
+  transition:all .25s;
+  &:hover {
+    border:2px solid $black;
+    background:$black;
+    color:white;
+  }
+}
+.section.is-large {
+  padding:16rem 1.5rem;
+}
+
+/*
+** Header Styles
+*/
+.navbar {
+  background:$black;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:10;
+  box-shadow:none;
+  .navbar-item {
+    background:$clear!important;
+  }
+  .navbar-brand {
+    font-family:$serif;
+    a {
+      color:white;
+    }
+  }
+  .navbar-menu {
+    li {
+      a {
+        color:white;
+      }
+    }
+  }
+}
+#home {
+  #navbar {
+    transition:all .25s;
+    a {
+      transition:all .25s;
+    }
+    &.clear {
+      background:rgba(0,0,0,0);
+      .navbar-brand {
+        visibility:hidden;
+        opacity:0;
+      }
+      a {
+        color:$black;
+      }
+    }
+  }
+  .hero {
+    h1 {
+      font-family:$serif;
+      font-weight:700;
+    }
+  }
+}
+
+/*
+** Footer Styles
+*/
+.footer {
+  background:$black;
+  ul {
+    display:flex;
+    justify-content:center;
+    margin:20px 0;
+    li {
+      a {
+        color:white;
+        margin:0 15px;
+        i {
+          font-size:1.5em;
+        }
+      }
+    }
+  }
+}
+
+/*
+** Portfolio Item
+*/
+.portfolio-items {
+  .portfolio-item {
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    color:#fff;
+    font-family:$serif;
+    background:#000;
+    &:after {
+      @include responsive;
+    }
+    >div {
+      width:100%;
+      text-align:center;
+      opacity:0;
+      z-index:1;
+      font-weight:700;
+      transition:all .5s;
+      p {
+        margin:0;
+      }
+    }
+    span {
+      display:block;
+      margin:5px auto;
+      padding-bottom:1px;
+      height:0;
+      width:0;
+      transition:all .75s ease;
+    }
+    img {
+      position:absolute;
+      height:100%;
+      width:auto;
+      max-width:none;
+      z-index:0;
+      transition:all 1s;
+    }
+    &:hover div {
+      opacity:1;
+    }
+    &:hover span {
+      width:20%;
+      background:white;
+    }
+    &:hover img {
+      opacity:0.5;
+      transform: scale(1.3,1.3);
+      -moz-transform: scale(1.3,1.3);
+      -ms-transform: scale(1.3,1.3);
+      -o-transform: scale(1.3,1.3);
+      -webkit-transform: scale(1.3,1.3);
+    }
+  }
+}
+
+/*
+** Hero Styles
+*/
+.hero {
+  justify-content:center;
+  background-image:url('https://static.pexels.com/photos/94730/pexels-photo-94730-large.jpeg');
+  background-size:cover;
+  background-attachment:fixed;
+  .is-size-1 {
+    position:relative;
+    top:20px;
+    opacity:0;
+    animation:onLoad 1s linear .5s 1 forwards;
+    -webkit-animation:onLoad 1s linear .5s 1 forwards;
+    -moz-animation:onLoad 1s linear .5s 1 forwards;
+    -o-animation:onLoad 1s linear .5s 1 forwards;
+  }
+  .is-size-3 {
+    position:relative;
+    top:20px;
+    opacity:0;
+    animation:onLoad 1s linear 1s 1 forwards;
+    -webkit-animation:onLoad 1s linear 1s 1 forwards;
+    -moz-animation:onLoad 1s linear 1s 1 forwards;
+    -o-animation:onLoad 1s linear 1s 1 forwards;
+  }
+  .button {
+    margin-top:15px;
+    position:relative;
+    top:20px;
+    opacity:0;
+    animation:onLoad 1s linear 1.75s 1 forwards;
+    -webkit-animation:onLoad 1s linear 1.75s 1 forwards;
+    -moz-animation:onLoad 1s linear 1.75s 1 forwards;
+    -o-animation:onLoad 1s linear 1.75s 1 forwards;
+  }
+}
+
+/*
+** Contact Form Styles
+*/
+#contact {
+  input {
+    width:100%;
+    margin:10px 0;
+    padding:7.5px;
+    border: 1px solid $black;
+    border-radius:0;
+    font:inherit;
+  }
+  input[type='submit'] {
+    width:30%;
+    display:block;
+    margin:0 auto;
+    border:2px solid $black;
+    background:white;
+    cursor:pointer;
+    transition:all .25s;
+    &:hover {
+      background:$black;
+      color:white;
+    }
+  }
+  textarea {
+    width:100%;
+    margin:10px 0;
+    padding:7.5px;
+    height:150px;
+    border:1px solid $black;
+    font:inherit;
+  }
+}
+
+
+/*
+** About Page
+*/
+#about {
+  margin-top:65px;
+  .headshot {
+    display:block;
+    position:relative;
+    top:20px;
+    opacity:0;
+    margin:0 auto;
+    height:200px;
+    width:200px;
+    border-radius:100%;
+    overflow:hidden;
+    animation:onLoad 1s linear .5s 1 forwards;
+    -webkit-animation:onLoad 1s linear .5s 1 forwards;
+    -moz-animation:onLoad 1s linear .5s 1 forwards;
+    -o-animation:onLoad 1s linear .5s 1 forwards;
+    img {
+      height:auto;
+      width:100%;
+    }
+  }
+  .info {
+    position:relative;
+    top:20px;
+    opacity:0;
+    line-height:1.6;
+    animation:onLoad 1s linear 1s 1 forwards;
+    -webkit-animation:onLoad 1s linear 1s 1 forwards;
+    -moz-animation:onLoad 1s linear 1s 1 forwards;
+    -o-animation:onLoad 1s linear 1s 1 forwards;
+  }
+  #contact {
+    position:relative;
+    top:20px;
+    opacity:0;
+    animation:onLoad 1s linear 1.5s 1 forwards;
+    -webkit-animation:onLoad 1s linear 1.5s 1 forwards;
+    -moz-animation:onLoad 1s linear 1.5s 1 forwards;
+    -o-animation:onLoad 1s linear 1.5s 1 forwards;
+  }
+}
+
+
+/*
+** Keyframes
+*/
+@keyframes onLoad {
+  0% {top:20px; opacity:0;}
+  100% {top:0px; opacity:1;}
+}
+@-webkit-keyframes onLoad {
+  0% {top:20px; opacity:0;}
+  100% {top:0px; opacity:1;}
+}
+@-moz-keyframes onLoad {
+  0% {top:20px; opacity:0;}
+  100% {top:0px; opacity:1;}
+}
+@-o-keyframes onLoad {
+  0% {top:20px; opacity:0;}
+  100% {top:0px; opacity:1;}
+}
