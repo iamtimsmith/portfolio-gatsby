@@ -4,11 +4,11 @@ import Footer from '../../components/footer'
 import Item from '../../components/portfolioItem'
 
 export default ({data}) => (
-  <div style={{marginTop:'64px'}}>
+  <div style={{marginTop:'64px'}} id='work'>
     <Header />
-    <div className="portfolio-items">
-      {data.allMarkdownRemark.edges.map( ({node}) => (
-        <Item name={node.frontmatter.title} tags={node.frontmatter.tags} url={node.frontmatter.url} img={node.frontmatter.img2} />
+    <div className="portfolio-items columns is-multiline">
+      {data.allMarkdownRemark.edges.map(({node}) => (
+        <Item name={node.frontmatter.title} tags={node.frontmatter.tags} url={node.frontmatter.url} img={node.frontmatter.thumbnail} />
       ))}
     </div>
     <Footer />
@@ -17,14 +17,15 @@ export default ({data}) => (
 
 export const query = graphql`
   query PortfolioQuery {
-    allMarkdownRemark {
+    allMarkdownRemark(sort:{fields:[frontmatter___priority], order:ASC}) {
       edges {
         node {
-          frontmatter {
+          frontmatter{
             title
             url
             tags
-            img2
+            thumbnail
+            priority
           }
         }
       }

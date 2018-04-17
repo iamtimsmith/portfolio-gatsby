@@ -5,13 +5,14 @@ import Footer from '../components/footer'
 export default ({ data }) => {
   const post = data.markdownRemark;
   return (
-    <div style={{marginTop:'64px'}}>
+    <div style={{marginTop:'64px', paddingTop:'50px'}}>
       <Header />
       <div className="container" id='post'>
         <section className="section has-text-centered">
-          <h1 className='is-size-3 post-header'>{post.frontmatter.title}</h1>
-          <p className='is-size-4 post-tags'>{post.frontmatter.tags}</p>
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+          <h1 className='is-size-2 post-header'>{post.frontmatter.title}</h1>
+          <span className="line"></span>
+          <p className='is-size-5 post-tags'>{post.frontmatter.tags}</p>
+          <div dangerouslySetInnerHTML={{ __html: post.html }} style={{paddingLeft:'50px', paddingRight:'50px'}} />
           <div className="mouse" id='mouse'>
             <span className="divide"></span>
             <span className="wheel"></span>
@@ -28,25 +29,13 @@ export default ({ data }) => {
             </div>
           </div>
         </section>
-        <a href={post.frontmatter.siteUrl} className='button' target='_blank'>Visit Site</a>
+        <div className="columns is-centered">
+          <a href={post.frontmatter.siteUrl} className='column button is-large is-one-third' target='_blank'>Visit Site</a>
+        </div>
       </div>
       <Footer />
     </div>
   );
-};
-
-window.onscroll = () => {
-  var top = window.pageYOffset
-  console.log(top)
-  var mouse = document.getElementById('mouse')
-  var img1 = document.getElementById('img1')
-  var img2 = document.getElementById('img2')
-
-  if (top >= 100) {
-    mouse.classList.add('hide')
-    img1.classList.add('slideRight')
-    img2.classList.add('slideLeft')
-  }
 };
 
 export const query = graphql`

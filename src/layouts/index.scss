@@ -291,6 +291,9 @@ html {
     -moz-animation:onLoad 1s linear 1.5s 1 forwards;
     -o-animation:onLoad 1s linear 1.5s 1 forwards;
   }
+  .footer {
+    margin-top:100px;
+  }
 }
 
 
@@ -320,41 +323,100 @@ $itemCount:6;
 /*
 ** Dynamic Pages
 */
-.mouse {
-  position: relative;
-  display: block;
-  margin: 100px auto;
-  border: 2px solid #222;
-  height: 30px;
-  width: 17.5px;
-  border-radius: 17.5px;
-  transition:all .5s;
-  &.hide {
-    opacity:0;
+#post {
+  .post-header {
+    font-family:$serif;
   }
-  .divide {
-    position: absolute;
-    left: 6.5px;
-    width: 1.5px;
-    height: 15px;
-    background: #222;
+  .line {
+    display:block;
+    margin:0 auto;
+    margin-bottom:5px;
+    padding-bottom:1px;
+    height:0;
+    animation:line 1.5s linear .5s 1 forwards;
+    -webkit-animation:line 1.5s linear .5s 1 forwards;
+    -moz-animation:line 1.5s linear .5s 1 forwards;
+    -o-animation:line 1.5s linear .5s 1 forwards;
   }
-  .wheel {
+  .post-tags {
+    margin:20px auto 80px;
+    color:#999;
+    font-weight:bold;
+  }
+  .mouse {
     position: relative;
     display: block;
-    margin: 0 auto;
-    border: 1px solid #222;
-    width: 3px;
-    height: 3px;
-    border-radius: 100%;
-    background: #222;
-    top: 5px;
-    animation: scroll 1s infinite 3s linear;
-    -webkit-animation: scroll 1s infinite 3s linear;
-    -moz-animation: scroll 1s infinite 3s linear;
-    -o-animation: scroll 1s infinite 3s linear;
+    margin: 100px auto;
+    border: 2px solid #222;
+    height: 30px;
+    width: 17.5px;
+    border-radius: 17.5px;
+    transition:all .5s;
+    opacity:1;
+    .divide {
+      position: absolute;
+      left: 6px;
+      width: 2px;
+      height: 15px;
+      background: #222;
+    }
+    .wheel {
+      position: relative;
+      display: block;
+      margin: 0 auto;
+      border: 2px solid #222;
+      width: 6px;
+      height: 6px;
+      border-radius: 100%;
+      background: #222;
+      top: 5px;
+      animation: scroll 1s infinite 3s linear;
+      -webkit-animation: scroll 1s infinite 3s linear;
+      -moz-animation: scroll 1s infinite 3s linear;
+      -o-animation: scroll 1s infinite 3s linear;
+    }
+  }
+  #img1 {
+    height:200px;
+    position:relative;
+    left:-20px;
+    opacity:0;
+    transition:all 1s;
+  }
+  #img2 {
+    height:200px;
+    position:relative;
+    right:-20px;
+    opacity:0;
+    transition:all 1s;
+  }
+  .button {
+    margin:50px;
+    display:none;
+    opacity:0;
+    transition:all 1s;
+  }
+  &.change {
+    #mouse {
+      opacity:0;
+    }
+    #img1 {
+      height:auto;
+      opacity:1;
+      left:0;
+    }
+    #img2 {
+      height:auto;
+      opacity:1;
+      right:0;
+    }
+    .button {
+      display:flex;
+      opacity:1;
+    }
   }
 }
+
 
 /*
 ** Keyframes
@@ -378,7 +440,7 @@ $itemCount:6;
 
 @keyframes line {
 	from {width:0px; background:transparent;}
-	to {width:20%; background:black;}
+	to {width:20%; background:$black;}
 }
 
 @keyframes scroll {

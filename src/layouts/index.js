@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import Header from '../components/header'
+require('font-awesome/css/font-awesome.css')
 import 'bulma'
 import '../layouts/index.scss'
 

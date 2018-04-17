@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Freelance Front End Web Developer | Tim Smith',
   },
   plugins: [
     {
