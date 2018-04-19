@@ -8,5 +8,7 @@ img2: 'http://www.iamtimsmith.com/images/theeffieafton-mockup.jpg'
 siteUrl: 'http://theeffieafton.iamtimsmith.com'
 thumbnail: 'http://www.iamtimsmith.com/images/theeffieafton-mockup.jpg'
 priority: 1
+last: '/scffld'
+next: '/elevations-casework'
 ---
 The Effie Afton is an indie rock band from the midwest. They were looking for a minimalist website to showcase their music.

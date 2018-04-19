@@ -4,16 +4,18 @@ import Header from '../components/header'
 import Footer from '../components/footer'
 import Hero from '../components/hero'
 import Item from '../components/portfolioItem'
+import OffCanvas from '../components/offCanvas'
 
 const IndexPage = ({data}) => (
   <div id='home'>
     <Header />
     <Hero />
-    <div className="portfolio-items columns is-multiline">
+    <div className="portfolio-items columns is-multiline" style={{marginTop:'0'}}>
     {data.allMarkdownRemark.edges.map( ({node}) => (
       <Item name={node.frontmatter.title} tags={node.frontmatter.tags} url={node.frontmatter.url} img={node.frontmatter.thumbnail} />
     ))}
     </div>
+    <OffCanvas />
     <Footer />
   </div>
 )

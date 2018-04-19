@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import Header from '../../components/header'
 import Footer from '../../components/footer'
 import Contact from '../../components/contact'
+import OffCanvas from '../../components/offCanvas'
 
 export default () => (
   <div id='about'>
@@ -24,6 +25,7 @@ export default () => (
       </div>
     </section>
   </div>
+  <OffCanvas />
   <Footer />
 </div>
 )

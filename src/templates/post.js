@@ -1,6 +1,8 @@
 import React from "react"
+import Link from 'gatsby-link'
 import Header from '../components/header'
 import Footer from '../components/footer'
+import OffCanvas from '../components/offCanvas'
 
 export default ({ data }) => {
   const post = data.markdownRemark;
@@ -13,6 +15,8 @@ export default ({ data }) => {
           <span className="line"></span>
           <p className='is-size-5 post-tags'>{post.frontmatter.tags}</p>
           <div dangerouslySetInnerHTML={{ __html: post.html }} style={{paddingLeft:'50px', paddingRight:'50px'}} />
+          <Link to={post.frontmatter.last} className='is-size-5' id='last'>Last</Link>
+          <Link to={post.frontmatter.next} className='is-size-5' id='next'>Next</Link>
           <div className="mouse" id='mouse'>
             <span className="divide"></span>
             <span className="wheel"></span>
@@ -33,6 +37,7 @@ export default ({ data }) => {
           <a href={post.frontmatter.siteUrl} className='column button is-large is-one-third' target='_blank'>Visit Site</a>
         </div>
       </div>
+      <OffCanvas />
       <Footer />
     </div>
   );
@@ -49,6 +54,8 @@ export const query = graphql`
         img1
         img2
         siteUrl
+        last
+        next
       }
     }
   }
