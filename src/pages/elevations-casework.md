@@ -11,4 +11,4 @@ priority: 2
 last: '/the-effie-afton'
 next: '/barley-and-rye'
 ---
-This was a small redesign after a name change. The page was moving to a new domain and they just wanted small updates to the page to make it look a little more presentable. To help speed up the process, I used the Bootstrap framework.
+This was a small redesign after a name change. The page was moving to a new domain and they just wanted small updates to the page to make it look a little more presentable. To help speed up the process, I used the <a href='http://getbootstrap.com/docs/3.3/' target='_blank'>Bootstrap</a> framework.

@@ -13,7 +13,7 @@ export default ({ data }) => {
           <h1 className='is-size-2 post-header'>{post.frontmatter.title}</h1>
           <span className="line"></span>
           <p className='is-size-5 post-tags'>{post.frontmatter.tags}</p>
-          <div dangerouslySetInnerHTML={{ __html: post.html }} style={{paddingLeft:'50px', paddingRight:'50px'}} />
+          <div  id='postContent' dangerouslySetInnerHTML={{ __html: post.html }} style={{paddingLeft:'50px', paddingRight:'50px'}} />
           <Link to={post.frontmatter.last} className='is-size-5' id='last'>Last</Link>
           <Link to={post.frontmatter.next} className='is-size-5' id='next'>Next</Link>
           <div className="mouse" id='mouse'>

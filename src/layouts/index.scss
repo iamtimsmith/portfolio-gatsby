@@ -489,6 +489,12 @@ $itemCount:6;
   -webkit-animation:fadeIn 1s linear .5s 1 forwards;
   -moz-animation:fadeIn 1s linear .5s 1 forwards;
   -o-animation:fadeIn 1s linear .5s 1 forwards;
+  #postContent {
+    a {
+      color:$black;
+      text-decoration:underline;
+    }
+  }
   .post-header {
     font-family:$serif;
   }
