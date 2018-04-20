@@ -19,7 +19,7 @@ const IndexPage = ({data}) => (
     <section className="section columns is-centered" style={{paddingTop:'100px', paddingBottom:'100px'}}>
       <Contact />
     </section>
-    <OffCanvas />
+    
     <Footer />
   </div>
 )

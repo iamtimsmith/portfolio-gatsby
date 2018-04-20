@@ -2,7 +2,6 @@ import React from "react"
 import Link from 'gatsby-link'
 import Header from '../components/header'
 import Footer from '../components/footer'
-import OffCanvas from '../components/offCanvas'
 
 export default ({ data }) => {
   const post = data.markdownRemark;
@@ -25,7 +24,7 @@ export default ({ data }) => {
         <section className="section">
           <div className="columns">
             <div className="column" id='img1'>
-              <img src={post.frontmatter.frontpage} alt={post.frontmatter.name}/>
+              <img src={post.frontmatter.frontpage} alt={post.frontmatter.name} style={{border:'1px solid #eee'}}/>
             </div>
             <div className="column" id='img2'>
             <img src={post.frontmatter.img1} alt={post.frontmatter.name}/>
@@ -37,7 +36,6 @@ export default ({ data }) => {
           <a href={post.frontmatter.siteUrl} className='column button is-large is-one-third' target='_blank'>Visit Site</a>
         </div>
       </div>
-      <OffCanvas />
       <Footer />
     </div>
   );
