@@ -9,6 +9,7 @@ $sans: 'Raleway', sans;
 $black: #222;
 $grey: #c1c1c1;
 $clear: rgba(0,0,0,0);
+$itemCount:100;
 
 // Mixins
 @mixin responsive {
@@ -176,7 +177,6 @@ a:focus {outline:none!important;}
   .portfolio-items {
     margin-bottom:0!important;
   }
-  $itemCount:6;
   @for $i from 1 through $itemCount {
     .portfolio-item:nth-child(#{$i}) {
     $delay: $i * 0.5s;
@@ -459,7 +459,6 @@ a:focus {outline:none!important;}
 /*
 ** Work Page
 */
-$itemCount:6;
 #work {
   .portfolio-items {
     margin-bottom:0!important;
