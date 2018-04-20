@@ -1,26 +1,46 @@
-# gatsby-starter-default
-The default Gatsby starter.
+# Portfolio for Tim Smith
+iamtimsmith.com
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/).
+## Technologies Utilized
+
+- [Bulma](https://www.bulma.io)
+- [Gatsby](https://www.gatsbyjs.org)
+- [FontAwesome 4](https://fontawesome.com/v4.7.0/)
+- [Yarn](https://yarnpkg.com/en/)
+
+## List of things still to do
+
+- Put favicon in the Helmet for the site
+- Add SEO for each page??
+
 
 ## Install
 
 Make sure that you have the Gatsby CLI program installed:
+
 ```sh
 npm install --global gatsby-cli
 ```
 
 And run from your CLI:
+
 ```sh
 gatsby new gatsby-example-site
 ```
 
 Then you can run it by:
+
 ```sh
 cd gatsby-example-site
-npm run develop
+gatsby develop
 ```
 
 ## Deploy
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+First, build the project so it will create static files:
+
+```sh
+gatsby build
+```
+
+Then upload the static files to the ftp of your choosing.
