@@ -6,7 +6,7 @@ import Item from '../../components/portfolioItem'
 export default ({data}) => (
   <div style={{marginTop:'64px'}} id='work'>
     <Header />
-    <div className="portfolio-items columns is-multiline" style={{marginTop:'0'}}>
+    <div className="portfolio-items columns is-multiline" style={{marginTop:'0', minHeight:'750px'}}>
       {data.allMarkdownRemark.edges.map(({node}) => (
         <Item name={node.frontmatter.title} tags={node.frontmatter.tags} url={node.frontmatter.url} img={node.frontmatter.thumbnail} />
       ))}

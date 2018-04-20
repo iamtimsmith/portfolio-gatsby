@@ -11,5 +11,5 @@ priority: 4
 last: '/barley-and-rye'
 next: '/away-from-dice'
 ---
-Wordpress was an obvious choice as a platform when building a site for the Away From Dice podcast. With plugins to make customizations simple for users, it puts the control in the client's hands.
+This is a website I built for the guests at my wedding. I wanted it to act as an RSVP and schedule while providing ideas for fun things to do. Each item in the stuff to do page links to the activity websites.
 

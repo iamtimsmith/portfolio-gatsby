@@ -7,7 +7,7 @@ export default ({data}) =>  {
   return (
     <div>
       <Header />
-      <div className="container" style={{marginTop:'75px'}}>
+      <div className="container" style={{marginTop:'75px', minHeight:'750px'}}>
         <section className="section">
           <p className='is-size-1'>My Site's Files</p>
           <table className='table is-fullwidth'>

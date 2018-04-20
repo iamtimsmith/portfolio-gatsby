@@ -14,7 +14,6 @@ class IndexPage extends React.Component {
   componentDidMount() {
     window.onscroll = () => {
       var top = window.pageYOffset
-      console.log(top)
       var navbar = document.getElementById("navbar")
       if(top < 650) {	
         navbar.classList.add('clear')

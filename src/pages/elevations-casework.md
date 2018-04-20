@@ -5,7 +5,7 @@ tags: '#html #css #bootstrap #wordpress'
 frontpage: 'http://www.iamtimsmith.com/images/portfolio/elevations/frontpage.jpg'
 img1: 'http://www.iamtimsmith.com/images/portfolio/elevations/mockup2.jpg'
 img2: 'http://www.iamtimsmith.com/images/portfolio/elevations/mockup1.jpg'
-siteUrl: 'https://www.elevationscasework.com'
+siteUrl: 'http://www.elevationscasework.com'
 thumbnail: 'http://www.iamtimsmith.com/images/elevations-mockup.jpg'
 priority: 2
 last: '/the-effie-afton'

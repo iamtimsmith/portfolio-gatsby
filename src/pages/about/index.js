@@ -7,7 +7,7 @@ import Contact from '../../components/contact'
 export default () => (
   <div id='about'>
   <Header />
-  <div className="container">
+  <div className="container" style={{minHeight:'750px'}}>
     <section className="section">
       <div className='headshot' id='animate-img'>
         <img src='http://www.iamtimsmith.com/images/Tim.jpg' alt='Tim Smith' />
@@ -17,7 +17,7 @@ export default () => (
       <div className="columns">
         <div className="column info">
           <p className='is-size-3'>Hey there!</p>
-          <p>My name is Tim Smith and I'm a front end web developer. I know what you're thinking. 'What in the heck is a Front-End Web Developer and why do I need one?' I'm glad you asked. I build responsive websites using HTML, CSS, and JQuery. I also have experience with PHP and Wordpress as a CMS platform.<br/><br/>Still reading? Awesome! In my free time I spend time with my fiance and daughter and feed my ice cream addiction.<br/><br/>I'm looking for a Front-End Web Developer position, so if I sound like a good fit you, use the fancy contact form!</p>
+          <p>My name is Tim Smith and I'm a front end web developer. I build responsive websites using modern technologies like React, Vue, Sass, Git, as well as good old jQuery. I also have experience with PHP and Wordpress as a CMS platform.<br/><br/>When I'm not building things for the web, I enjoy spending time with my wife and daughter who always know how to have fun. I also attend online classes for my AAS in Web Development, which I will be receiving in 2019.<br/><br/>Although I'm a front end developer I like challenges of all sorts so if you are looking for someone to work with, use the fancy contact form to get in touch!</p>
           <a href="http://iamtimsmith.com/TimSmith_resume.pdf" target="_blank" className="button" style={{marginTop:'20px'}}>My Resume</a>
         </div>
         <Contact />

@@ -42,6 +42,11 @@ html {
 .is-12 {
   width:100%;
 }
+input:focus, 
+button:focus, 
+textarea:focus, 
+select:focus, 
+a:focus {outline:none!important;}
 
 /*
 ** Header Styles
