@@ -10,9 +10,13 @@ iamtimsmith.com
 
 ## List of things still to do
 
-- Put favicon in the Helmet for the site
+- Set up smooth scrolling for front page
 - Add SEO for each page??
 
+
+#### Completed
+
+- Put favicon in the Helmet for the site
 
 ## Install
 
