@@ -5,6 +5,7 @@ import Footer from '../components/footer'
 import Hero from '../components/hero'
 import Item from '../components/portfolioItem'
 import OffCanvas from '../components/offCanvas'
+import Contact from '../components/contact'
 
 const IndexPage = ({data}) => (
   <div id='home'>
@@ -15,6 +16,9 @@ const IndexPage = ({data}) => (
       <Item name={node.frontmatter.title} tags={node.frontmatter.tags} url={node.frontmatter.url} img={node.frontmatter.thumbnail} />
     ))}
     </div>
+    <section className="section columns is-centered" style={{paddingTop:'100px', paddingBottom:'100px'}}>
+      <Contact />
+    </section>
     <OffCanvas />
     <Footer />
   </div>
@@ -33,7 +37,7 @@ window.onscroll = () => {
     navbar.classList.remove('clear')
   }
 
-  if (document.getElementById('post')) {
+  if (document.getElementById('post') && top > 100) {
     document.getElementById("post").classList.add("change")
   } else {}
 };

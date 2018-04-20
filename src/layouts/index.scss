@@ -121,6 +121,11 @@ html {
       }
     }
   }
+  @media (min-width:1088px) {
+    .offcanvas-toggle {
+      visibility:hidden;
+    }
+  }
   .navbar-menu {
     li {
       a {
@@ -151,9 +156,16 @@ html {
     }
   }
   .hero {
+    color:$black;
     h1 {
       font-family:$serif;
       font-weight:700;
+    }
+    .button {
+      color:$black;
+      &:hover {
+        color:white;
+      }
     }
   }
   .portfolio-items {

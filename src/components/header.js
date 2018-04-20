@@ -25,7 +25,6 @@ const toggleOffcanvas = () => {
   const brand = document.getElementById('navbarBrand').classList
   const btn = document.getElementById('offcanvasToggle').classList
   const off = document.getElementById('offcanvas').classList
-  console.log('clicked')
   brand.contains('hidden') ? brand.remove('hidden') : brand.add('hidden')
   btn.contains('active') ? btn.remove('active') : btn.add('active')
   off.contains('showing') ? off.remove('showing') : off.add('showing')
