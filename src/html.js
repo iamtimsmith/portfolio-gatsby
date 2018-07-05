@@ -2,6 +2,7 @@ import React from "react"
 import faviconICO from './static/favicon.ico'
 import favicon16 from './static/favicon-16x16.png'
 import favicon32 from './static/favicon-32x32.png'
+import identity from 'https://identity.netlify.com/v1/netlify-identity-widget.js'
 
 let stylesStr
 if (process.env.NODE_ENV === `production`) {
@@ -35,7 +36,7 @@ module.exports = class HTML extends React.Component {
           <link rel="apple-touch-icon" sizes="180x180" href={faviconICO} />
           <link rel="icon" type="image/png" sizes="32x32" href={favicon32} />
           <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
-          <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+          <script src={identity}></script>
           {this.props.headComponents}
           {css}
         </head>
@@ -47,7 +48,7 @@ module.exports = class HTML extends React.Component {
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
-          <script>
+          {
             if (window.netlifyIdentity) {
               window.netlifyIdentity.on("init", user => {
                 if (!user) {
@@ -57,7 +58,7 @@ module.exports = class HTML extends React.Component {
                 }
               });
             }
-          </script>
+          }
         </body>
       </html>
     )
